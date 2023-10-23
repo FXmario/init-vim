@@ -70,6 +70,7 @@ call plug#begin('~/.config/nvim/')
     Plug 'neovim/nvim-lspconfig'
     Plug 'plasticboy/vim-markdown'
     Plug 'nvim-lua/completion-nvim'
+    Plug 'yaegassy/coc-htmldjango', {'do': 'yarn install --frozen-lockfile'}
 
     " Git
     Plug 'airblade/vim-gitgutter'
