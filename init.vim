@@ -71,6 +71,7 @@ call plug#begin('~/.config/nvim/')
     Plug 'plasticboy/vim-markdown'
     Plug 'nvim-lua/completion-nvim'
     Plug 'yaegassy/coc-htmldjango', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'rust-lang/rust.vim'
 
     " Git
     Plug 'airblade/vim-gitgutter'
