@@ -12,6 +12,7 @@ set splitbelow splitright
 set title
 set ttimeoutlen=0
 set wildmenu
+syntax on
 
 " Tabs size
 set expandtab
@@ -43,7 +44,6 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-
 call plug#begin('~/.config/nvim/')
   " Appearance
     Plug 'vim-airline/vim-airline'
@@ -51,6 +51,7 @@ call plug#begin('~/.config/nvim/')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'hoob3rt/lualine.nvim'
+    Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 
     " Utilities
     Plug 'sheerun/vim-polyglot'
@@ -105,3 +106,13 @@ inoremap <silent><expr> <Tab>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"O
+
+colorscheme nordic
+
+lua << EOF
+  	color = color or "nordic"
+    vim.cmd.colorscheme(color)
+
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+EOF
