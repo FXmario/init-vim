@@ -74,6 +74,7 @@ call plug#begin('~/.config/nvim/')
     Plug 'yaegassy/coc-htmldjango', {'do': 'yarn install --frozen-lockfile'}
     Plug 'yaegassy/coc-pylsp', {'do': 'yarn install --frozen-lockfile'}
     Plug 'rust-lang/rust.vim'
+    Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
 
     " Git
     Plug 'airblade/vim-gitgutter'
